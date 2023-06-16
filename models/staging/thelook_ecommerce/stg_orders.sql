@@ -1,9 +1,3 @@
-with orders as (
-    select
-    * 
-    from {{ source ('thelook_ecommerce' , 'orders')}}
-)
+{{ config(materialized='table') }}
 
-select
-*
-from orders
+select * from {{ source("thelook_ecommerce", "orders") }}

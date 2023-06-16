@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: thelook_ecommerce
+    description: A clone of Prostgres application database.
+    database: upheld-cosmos-384718
+    schema: thelook_ecommerce
+    tables:
+      - name: orders
+        description: The raw orders data. 
+        columns:
+          - name: order_id
+            description: The primary key for the raw orders data
+            tests:
+              - unique
+              - not_null
+      - name: users 
+        description: raw users 
+      - name: products
+        description: raw products
+      - name: order_items
+        description: raw order_itmes
+      - name: inventory_items
+        description: raw inventory
+      - name: distribution_centers
+        description: raw dist centers
+
+  
