@@ -4,8 +4,32 @@ models:
     - name: stg_orders
       description: "Orders table"
       columns:
+          - name: order_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: stg_users
+      description: "Users table"
+      columns:
           - name: id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
+
+    - name: stg_products
+      description: "Product table"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+
+    - name: stg_order_items
+      description: "Orders items table"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null    
