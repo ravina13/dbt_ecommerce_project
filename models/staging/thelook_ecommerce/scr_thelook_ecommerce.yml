@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: thelook_ecommerce
     description: A clone of Prostgres application database.
-    database: raw
+    database: upheld-cosmos-384718
     schema: thelook_ecommerce
     tables:
       - name: orders
