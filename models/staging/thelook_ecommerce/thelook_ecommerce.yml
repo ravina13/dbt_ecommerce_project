@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: stg_orders
+      description: "Orders table"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
