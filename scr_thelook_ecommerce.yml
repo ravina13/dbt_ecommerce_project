@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: thelook_ecommerce
+    description: A clone of Prostgres application database.
+    database: raw
+    schema: thelook_ecommerce
+    tables:
+      - name: orders
+        description: The raw orders data.
+        columns:
+          - name: id
+            description: The primary key for the raw orders data
+            tests:
+              - unique
+              - not_null
