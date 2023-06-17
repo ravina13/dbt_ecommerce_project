@@ -2,7 +2,7 @@ version: 2
 
 models:
     - name: stg_orders
-      description: "Orders table"
+      description: "Orders table has a total of 125,527 orders"
       columns:
           - name: order_id
             description: "The primary key for this table"
@@ -20,7 +20,7 @@ models:
                 - not_null
 
     - name: stg_products
-      description: "Product table"
+      description: "Product table, 29,120 products"
       columns:
           - name: id
             description: "The primary key for this table"
@@ -32,4 +32,14 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
-                - not_null    
+                - not_null  
+
+    - name: stg_order_value
+      description: "This is the order value table that ahs total_sale_price, total_cost and total_retail_price"
+      columns:
+        - name: order_id
+          description: "The primary key for this table"
+          tests:
+            - unique
+            - not_null
+                
