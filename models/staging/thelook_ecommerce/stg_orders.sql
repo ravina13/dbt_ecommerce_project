@@ -1,3 +1,4 @@
 {{ config(materialized='table') }}
 
-select * from {{ source("thelook_ecommerce", "orders") }}
+select * from {{ source("thelook_ecommerce", "orders")}}
+
