@@ -17,13 +17,13 @@ WITH
     p.cost,
     p.retail_price
   FROM
-     {{ ref("stg_orders") }} o
+     {{ ref("stg_thelook_ecommerce_orders") }} o
   LEFT JOIN
-    {{ ref("stg_order_items") }} oi
+    {{ ref("stg_thelook_ecommerce_order_items") }} oi
   ON
     o.order_id = oi.order_id
   LEFT JOIN
-    {{ ref("stg_products") }} p
+    {{ ref("stg_thelook_ecommerce_products") }} p
   ON
     oi.product_id = p.id
   )
